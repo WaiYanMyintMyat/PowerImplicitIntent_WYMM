@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,13 +8,80 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+        <android.support.design.button.MaterialButton
+            android:id="@+id/btn_create_a_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/create_a_timer"
+            android:textAllCaps="false"
+            app:backgroundTint="@android:color/holo_blue_light"
+            app:rippleColor="@android:color/holo_red_dark" />
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/btn_add_a_calendar_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/add_a_calendar_event"
+            android:textAllCaps="false"
+            app:backgroundTint="@android:color/holo_blue_light"
+            app:rippleColor="@android:color/holo_red_dark" />
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/btn_capture_a_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/capture_a_video"
+            android:textAllCaps="false"
+            app:backgroundTint="@android:color/holo_blue_light"
+            app:rippleColor="@android:color/holo_red_dark" />
+
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/btn_select_a_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/select_a_contact"
+            android:textAllCaps="false"
+            app:backgroundTint="@android:color/holo_blue_light"
+            app:rippleColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/tv_select_a_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/select_a_contact"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/et_web_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search"/>
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/btn_web_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/web_search"
+            android:textAllCaps="false"
+            app:backgroundTint="@android:color/holo_blue_light"
+            app:rippleColor="@android:color/holo_red_dark" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
